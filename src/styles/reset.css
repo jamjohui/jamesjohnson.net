@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: white;
+    --color-text: black;
+    --color-component: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: black;
+    --color-text: white;
+    --color-component: white;
+  }
+}
+
+.light {
+  --color-bg: white;
+  --color-text: black;
+  --color-component: black;
+}
+
+.dark {
+  --color-bg: black;
+  --color-text: white;
+  --color-component: white;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
