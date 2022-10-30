@@ -20,33 +20,25 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint"
-  ],
+  "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "import/prefer-default-export": "off",
-    "indent": [
+    "import/no-extraneous-dependencies": [
       "error",
-      2
+      {
+        "devDependencies": ["./src/**/*.stories.tsx", "./src/**/*.test.tsx"]
+      }
     ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "quotes": [
-      "error",
-      "single"
-    ],
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
     "react/function-component-definition": [
       1,
       {
         "namedComponents": "arrow-function"
       }
     ],
-    "semi": [
-      "error",
-      "always"
-    ]
+    "react/jsx-props-no-spreading": "off",
+    "semi": ["error", "always"]
   }
 }
