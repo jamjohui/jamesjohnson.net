@@ -11,6 +11,7 @@ module.exports = {
     '@storybook/addon-interactions',
     '@storybook/addon-a11y',
     'storybook-addon-themes',
+    'storybook-css-modules',
   ],
   features: {
     interactionsDebugger: true,

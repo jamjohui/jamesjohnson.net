@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
 import { act, render, screen } from '@testing-library/react';
 import MatchMediaMock from 'jest-matchmedia-mock';
+import { useEffect } from 'react';
 
-import { useTheme } from './useTheme';
 import type { Theme } from '../types/Theme';
+import { useTheme } from './useTheme';
 
 const LightTheme = '(prefers-color-scheme: light)';
 const DarkTheme = '(prefers-color-scheme: dark)';

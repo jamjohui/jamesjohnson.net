@@ -1,4 +1,4 @@
-import { act, screen, render } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import MatchMediaMock from 'jest-matchmedia-mock';
 
 import Home from '../../pages/index';
@@ -25,6 +25,16 @@ describe('<Home />', () => {
   });
 
   it('clicking the switch changes the theme', async () => {
+    await act(async () => {
+      const toggle = screen.getByLabelText('Theme');
+      await toggle.click();
+
+      const light = screen.getByRole('heading');
+      expect(light).toHaveTextContent('Dark Theme');
+    });
+  });
+
+  it('clicking it again changes it back', async () => {
     await act(async () => {
       const toggle = screen.getByLabelText('Theme');
       // Switch to dark theme ...

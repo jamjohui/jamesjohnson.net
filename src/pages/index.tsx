@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+
 import { Switch } from '../components';
 import { useTheme } from '../hooks/useTheme';
 
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <h1>{theme === 'light' ? 'Light' : 'Dark'} Theme</h1>
+        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label>
           Theme <Switch onChange={onChange} />
         </label>

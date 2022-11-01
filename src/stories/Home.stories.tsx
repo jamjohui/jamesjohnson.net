@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { within, userEvent } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
+import { within, userEvent } from '@storybook/testing-library';
 
 import Home from '../pages/index';
 
@@ -15,10 +15,10 @@ Default.args = {};
 Default.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
   const currentTheme = canvas.getByRole('heading')?.innerHTML;
-  const el = canvas.getByRole('checkbox') as HTMLInputElement;
-  await userEvent.click(el);
+  const toggle = canvas.getByRole('checkbox') as HTMLInputElement;
+  await userEvent.click(toggle);
   const theme = canvas.getByRole('heading');
   await expect(theme).toHaveTextContent(
-    currentTheme === 'Light Theme' ? 'Dark Them' : 'Light Theme'
+    currentTheme === 'Light Theme' ? 'Dark Theme' : 'Light Theme'
   );
 };

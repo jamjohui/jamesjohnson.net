@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 
 import type { Theme } from '../types';
 
+/**
+ * Reports and updates the site theme
+ * @returns { theme, setTheme }
+ */
 export const useTheme = () => {
   const [theme, setTheme] = useState<Theme | undefined>();
 

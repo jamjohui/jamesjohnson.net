@@ -1,0 +1,6 @@
+.navBar {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 2em auto;
+  gap: 0.5em;
+}

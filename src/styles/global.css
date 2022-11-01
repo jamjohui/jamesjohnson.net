@@ -10,32 +10,18 @@ html {
   font-size: 16px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-bg: white;
-    --color-text: black;
-    --color-component: black;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: black;
-    --color-text: white;
-    --color-component: white;
-  }
-}
-
 .light {
-  --color-bg: white;
-  --color-text: black;
-  --color-component: black;
+  --color-bg: #f0f1f2;
+  --color-text: #0c0c0d;
+  --color-component: #0c0c0d;
+  --color-primary: #0094d3;
 }
 
 .dark {
-  --color-bg: black;
-  --color-text: white;
-  --color-component: white;
+  --color-bg: #0c0c0d;
+  --color-text: #f0f1f2;
+  --color-component: #f0f1f2;
+  --color-primary: #0094d3;
 }
 
 body {

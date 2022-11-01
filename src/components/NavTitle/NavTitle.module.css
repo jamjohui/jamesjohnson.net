@@ -1,0 +1,18 @@
+.title {
+  font-size: 1.5em;
+  composes: srOnly from '../../styles/srOnly.module.css';
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    position: unset;
+    width: auto;
+    height: auto;
+    padding: initial;
+    margin: initial;
+    overflow: initial;
+    clip: initial;
+    white-space: initial;
+    border-width: initial;
+  }
+}
