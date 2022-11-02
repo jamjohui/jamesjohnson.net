@@ -12,4 +12,8 @@ describe('cx', () => {
   it('omits undefined arguments', () => {
     expect(cx('one', undefined, 'two', undefined)).toBe('one two');
   });
+
+  it('omits false arguments', () => {
+    expect(cx('one', false, 'two', undefined)).toBe('one two');
+  });
 });

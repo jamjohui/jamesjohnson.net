@@ -1,8 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { Nav, NavProps } from './Nav';
-import { NavTitle } from '../NavTitle';
-import { Logo } from '../Logo';
 
 export default {
   title: 'Components/Nav',
