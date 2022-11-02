@@ -21,11 +21,3 @@ Default.args = {
   ),
   title: 'Main Menu',
 };
-// Default.parameters = {
-//   a11y: {
-//     config: {
-//       // Disabled because list items are provided by children
-//       rules: [{ id: 'list', enabled: false }],
-//     },
-//   },
-// };

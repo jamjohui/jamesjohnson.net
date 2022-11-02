@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import { NavItem } from './NavItem';
 
-describe('<NavBar />', () => {
+describe('<NavItem />', () => {
   it('renders its children', () => {
     render(<NavItem>Nav Item</NavItem>);
 

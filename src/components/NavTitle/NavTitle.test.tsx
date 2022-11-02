@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import { NavTitle } from './NavTitle';
 
-describe('<Header />', () => {
+describe('<NavTitle />', () => {
   it('renders the title', () => {
     render(<NavTitle>James Johnson</NavTitle>);
 
