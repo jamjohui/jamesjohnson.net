@@ -9,5 +9,5 @@ export interface NavBarProps {
 
 /** The global page header */
 export const NavBar = ({ children }: NavBarProps): JSX.Element => (
-  <header className={styles.navBar}>{children}</header>
+  <div className={styles.navBar}>{children}</div>
 );
