@@ -13,6 +13,14 @@ export const Default: ComponentStory<typeof NavItem> = (
 Default.args = {
   children: 'Nav Item',
 };
+Default.parameters = {
+  a11y: {
+    config: {
+      // Disabled because list is provided by parent container
+      rules: [{ id: 'listitem', enabled: false }],
+    },
+  },
+};
 
 export const Selected: ComponentStory<typeof NavItem> = (
   args: NavItemProps
@@ -20,4 +28,12 @@ export const Selected: ComponentStory<typeof NavItem> = (
 Selected.args = {
   children: 'Nav Item',
   selected: true,
+};
+Selected.parameters = {
+  a11y: {
+    config: {
+      // Disabled because list is provided by parent container
+      rules: [{ id: 'listitem', enabled: false }],
+    },
+  },
 };
