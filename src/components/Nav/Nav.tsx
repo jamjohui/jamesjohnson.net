@@ -2,7 +2,7 @@ import { ReactNode, MouseEvent } from 'react';
 
 import styles from './Nav.module.css';
 
-interface NavProps {
+export interface NavProps {
   /** Links to display */
   children: ReactNode;
 
