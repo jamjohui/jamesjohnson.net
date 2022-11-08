@@ -20,11 +20,11 @@ export const Switch = ({
   onChange,
 }: SwitchProps): JSX.Element => (
   <input
-    onChange={onChange}
-    className={styles.switch}
-    type="checkbox"
-    checked={checked}
-    readOnly={!onChange}
     aria-label={label}
+    checked={checked}
+    className={styles.switch}
+    onChange={onChange}
+    readOnly={!onChange}
+    type="checkbox"
   />
 );
