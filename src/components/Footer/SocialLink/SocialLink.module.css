@@ -1,0 +1,31 @@
+.srOnly {
+  composes: srOnly from '../../../styles/accessibility.module.css';
+}
+
+.listItem {
+  list-style: none;
+  margin-right: 1rem;
+}
+
+.listItem:last-of-type {
+  margin-right: 0;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+}
+
+.icon {
+  fill: var(--color-icon);
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.icon:hover {
+  fill: var(--color-icon-hover);
+}
+
+.icon:active {
+  fill: var(--color-icon-active);
+}
