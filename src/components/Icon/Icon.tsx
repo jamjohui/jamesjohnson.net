@@ -14,7 +14,7 @@ export interface IconProps {
 }
 
 /** An SVG Icon */
-export const Icon = ({ className = '', glyph }: IconProps): JSX.Element => {
+export const Icon = ({ className, glyph }: IconProps): JSX.Element => {
   const { style, path, viewbox } = Glyphs[glyph as keyof typeof Glyphs];
   return (
     <Svg
