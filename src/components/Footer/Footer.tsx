@@ -9,7 +9,7 @@ import styles from './Footer.module.css';
 export const Footer = (): JSX.Element => (
   <footer className={styles.footer}>
     <Copyright />
-    <Nav title="Social Media Links">
+    <Nav className={styles.nav} title="Social Media Links">
       {FooterMenu.map((item) => (
         <SocialLink
           key={item.id}
