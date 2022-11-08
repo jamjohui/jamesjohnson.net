@@ -1,4 +1,6 @@
-export const MainMenu = [
+import { MenuLink } from '../interfaces';
+
+export const MainMenu: MenuLink[] = [
   {
     id: 'home',
     label: 'Home',

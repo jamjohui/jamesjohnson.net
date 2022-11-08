@@ -1,1 +1,2 @@
-export type { FooterLink } from './FooterLink';
+/* istanbul ignore file */
+export type { MenuLink } from './MenuLink';
