@@ -4,5 +4,5 @@
 }
 
 .srOnly {
-  composes: srOnly from '../../../styles/accessibility.module.css';
+  composes: srOnly from '../../styles/accessibility.module.css';
 }
