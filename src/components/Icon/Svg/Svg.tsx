@@ -13,7 +13,3 @@ export const Svg = ({ className, path, viewbox }: SvgProps): JSX.Element => (
     <path d={path} />
   </svg>
 );
-
-Svg.defaultProps = {
-  className: undefined,
-};

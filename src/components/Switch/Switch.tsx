@@ -28,9 +28,3 @@ export const Switch = ({
     aria-label={label}
   />
 );
-
-Switch.defaultProps = {
-  checked: undefined,
-  label: undefined,
-  onChange: undefined,
-};
