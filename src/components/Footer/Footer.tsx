@@ -1,6 +1,6 @@
 import { Copyright } from './Copyright';
 import { FooterMenu } from '../../config';
-import { Nav } from './Nav';
+import { Nav } from '../Nav';
 import { SocialLink } from './SocialLink';
 
 import styles from './Footer.module.css';
