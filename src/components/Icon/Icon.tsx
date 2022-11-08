@@ -1,4 +1,4 @@
-import { cx } from '../../utils/cx';
+import { cx } from '../../utils';
 import { Glyphs } from './Glyphs';
 import type { IconGlyph } from '../../types';
 import { Svg } from './Svg';

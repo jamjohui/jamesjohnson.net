@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Switch } from '../components';
-import { useTheme } from '../hooks/useTheme';
+import { useTheme } from '../hooks';
 
 const Home: NextPage = () => {
   const { theme, setTheme } = useTheme();
