@@ -8,7 +8,7 @@ describe('<Nav />', () => {
   describe('with close button', () => {
     beforeEach(() =>
       render(
-        <Nav onClose={closeFunc} title="Test Nav">
+        <Nav className="nav" onClose={closeFunc} title="Test Nav">
           <li>
             <a href="#home">Home</a>
           </li>
@@ -45,6 +45,11 @@ describe('<Nav />', () => {
       });
       btn.click();
       expect(closeFunc).toHaveBeenCalled();
+    });
+
+    it('renders custom styles', () => {
+      const nav = screen.getByRole('navigation');
+      expect(nav).toHaveClass('nav');
     });
   });
 

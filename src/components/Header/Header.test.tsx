@@ -65,7 +65,7 @@ describe('<Header />', () => {
     expect(menu).toHaveClass('open');
   });
 
-  it('clicking the cloe button closes the menu', () => {
+  it('clicking the close button closes the menu', () => {
     openMenu();
     const btn = screen.getByLabelText('Close Menu', {
       selector: 'button',

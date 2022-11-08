@@ -6,6 +6,9 @@ interface NavProps {
   /** Links to display */
   children: ReactNode;
 
+  /** CSS Styling class */
+  className?: string;
+
   /** Close event handler */
   onClose?: (event: MouseEvent<HTMLButtonElement>) => void;
 
@@ -14,9 +17,14 @@ interface NavProps {
 }
 
 /** A menu list */
-export const Nav = ({ children, onClose, title }: NavProps): JSX.Element => (
-  <nav>
-    <h2 className={styles.srOnly}>{title}</h2>
+export const Nav = ({
+  children,
+  className,
+  onClose,
+  title,
+}: NavProps): JSX.Element => (
+  <nav className={className}>
+    <h3 className={styles.srOnly}>{title}</h3>
     <ul className={styles.list}>{children}</ul>
     {onClose && (
       <button aria-label="Close Menu" onClick={onClose} type="button">
