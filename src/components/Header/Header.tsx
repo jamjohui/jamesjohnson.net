@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import Link from 'next/link';
 
 import { Icon } from '../Icon';
+import { MainMenu } from '../../config';
 
 import styles from './Header.module.css';
 
@@ -21,6 +23,13 @@ export const Header = (): JSX.Element => {
       <h2>James Johnson</h2>
       <nav className={open ? styles.open : styles.closed}>
         <h3>Main Menu</h3>
+        <ul>
+          {MainMenu.map((item) => (
+            <li key={item.id}>
+              <Link href={item.url}>{item.label}</Link>
+            </li>
+          ))}
+        </ul>
         <button
           aria-label="Close Main Menu"
           onClick={onCloseClick}

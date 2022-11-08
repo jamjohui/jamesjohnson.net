@@ -1,6 +1,9 @@
 import { act, render, screen } from '@testing-library/react';
 
 import { Header } from './Header';
+import { MainMenu } from '../../config';
+
+const MenuLinks = MainMenu.map((item) => item.label);
 
 const openMenu = () => {
   const btn = screen.getByLabelText('Open Main Menu', {
@@ -27,6 +30,11 @@ describe('<Header />', () => {
   it('renders the menu', () => {
     const menu = screen.getByRole('navigation');
     expect(menu).toHaveTextContent('Main Menu');
+  });
+
+  it('renders the menu links', () => {
+    const links = screen.getAllByRole('link').map((item) => item.innerHTML);
+    expect(links).toEqual(MenuLinks);
   });
 
   it('renders the menu button', () => {
