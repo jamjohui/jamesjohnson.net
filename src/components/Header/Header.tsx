@@ -1,14 +1,37 @@
-import React, { ReactNode } from 'react';
+import { useState } from 'react';
+
+import { Icon } from '../Icon';
+
 import styles from './Header.module.css';
 
-export interface HeaderProps {
-  children?: ReactNode;
-}
+export const Header = (): JSX.Element => {
+  const [open, setOpen] = useState(false);
 
-export const Header = ({ children }: HeaderProps): JSX.Element => (
-  <div className={styles.Header}>{children}</div>
-);
+  const onOpenClick = () => {
+    setOpen(true);
+  };
 
-Header.defaultProps = {
-  children: undefined,
+  const onCloseClick = () => {
+    setOpen(false);
+  };
+
+  return (
+    <header className={styles.header}>
+      <Icon glyph="logo" />
+      <h2>James Johnson</h2>
+      <nav className={open ? styles.open : styles.closed}>
+        <h3>Main Menu</h3>
+        <button
+          aria-label="Close Main Menu"
+          onClick={onCloseClick}
+          type="button"
+        >
+          Close
+        </button>
+      </nav>
+      <button aria-label="Open Main Menu" onClick={onOpenClick} type="button">
+        Open
+      </button>
+    </header>
+  );
 };

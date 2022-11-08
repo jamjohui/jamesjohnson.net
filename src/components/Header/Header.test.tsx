@@ -1,11 +1,69 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 
 import { Header } from './Header';
 
+const openMenu = () => {
+  const btn = screen.getByLabelText('Open Main Menu', {
+    selector: 'button',
+  });
+  act(() => btn.click());
+};
+
 describe('<Header />', () => {
-  it('renders its children', () => {
-    render(<Header>Hello Header!</Header>);
-    expect(screen.getByText('Hello Header!')).toBeInTheDocument();
+  beforeEach(() => render(<Header />));
+
+  it('renders the logo', () => {
+    const logo = document.querySelector('.logo');
+    expect(logo).toBeInTheDocument();
+  });
+
+  it('renders the title', () => {
+    const title = screen.getByRole('heading', {
+      level: 2,
+    });
+    expect(title).toHaveTextContent('James Johnson');
+  });
+
+  it('renders the menu', () => {
+    const menu = screen.getByRole('navigation');
+    expect(menu).toHaveTextContent('Main Menu');
+  });
+
+  it('renders the menu button', () => {
+    const btn = screen.getByLabelText('Open Main Menu', {
+      selector: 'button',
+    });
+    expect(btn).toBeInTheDocument();
+  });
+
+  it('renders the close button', () => {
+    const btn = screen.getByLabelText('Close Main Menu', {
+      selector: 'button',
+    });
+    expect(btn).toBeInTheDocument();
+  });
+
+  it('the menu is closed by default', () => {
+    const menu = screen.getByRole('navigation');
+    expect(menu).toHaveClass('closed');
+  });
+
+  it('clicking the menu button opens the menu', () => {
+    const btn = screen.getByLabelText('Open Main Menu', {
+      selector: 'button',
+    });
+    act(() => btn.click());
+    const menu = screen.getByRole('navigation');
+    expect(menu).toHaveClass('open');
+  });
+
+  it('clicking the cloe button closes the menu', () => {
+    openMenu();
+    const btn = screen.getByLabelText('Close Main Menu', {
+      selector: 'button',
+    });
+    act(() => btn.click());
+    const menu = screen.getByRole('navigation');
+    expect(menu).toHaveClass('closed');
   });
 });
