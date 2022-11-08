@@ -1,4 +1,5 @@
 .icon {
+  fill: var(--color-fg);
   height: 1em;
   width: 1em;
 }

@@ -1,8 +1,8 @@
-.srOnly {
-  composes: srOnly from '../../../styles/accessibility.module.css';
-}
-
 .list {
   display: flex;
   justify-content: flex-end;
+}
+
+.srOnly {
+  composes: srOnly from '../../../styles/accessibility.module.css';
 }
