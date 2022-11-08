@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { Icon } from '../Icon';
 import { MainMenu } from '../../config';
+import { Nav } from '../Nav';
 
 import styles from './Header.module.css';
 
@@ -21,24 +22,18 @@ export const Header = (): JSX.Element => {
     <header className={styles.header}>
       <Icon glyph="logo" />
       <h2>James Johnson</h2>
-      <nav className={open ? styles.open : styles.closed}>
-        <h3>Main Menu</h3>
-        <ul>
-          {MainMenu.map((item) => (
-            <li key={item.id}>
-              <Link href={item.url}>{item.label}</Link>
-            </li>
-          ))}
-        </ul>
-        <button
-          aria-label="Close Main Menu"
-          onClick={onCloseClick}
-          type="button"
-        >
-          Close
-        </button>
-      </nav>
-      <button aria-label="Open Main Menu" onClick={onOpenClick} type="button">
+      <Nav
+        className={open ? styles.open : styles.closed}
+        onClose={onCloseClick}
+        title="Main Menu"
+      >
+        {MainMenu.map((item) => (
+          <li key={item.id}>
+            <Link href={item.url}>{item.label}</Link>
+          </li>
+        ))}
+      </Nav>
+      <button aria-label="Open Menu" onClick={onOpenClick} type="button">
         Open
       </button>
     </header>

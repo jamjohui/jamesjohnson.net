@@ -6,7 +6,7 @@ import { MainMenu } from '../../config';
 const MenuLinks = MainMenu.map((item) => item.label);
 
 const openMenu = () => {
-  const btn = screen.getByLabelText('Open Main Menu', {
+  const btn = screen.getByLabelText('Open Menu', {
     selector: 'button',
   });
   act(() => btn.click());
@@ -38,14 +38,14 @@ describe('<Header />', () => {
   });
 
   it('renders the menu button', () => {
-    const btn = screen.getByLabelText('Open Main Menu', {
+    const btn = screen.getByLabelText('Open Menu', {
       selector: 'button',
     });
     expect(btn).toBeInTheDocument();
   });
 
   it('renders the close button', () => {
-    const btn = screen.getByLabelText('Close Main Menu', {
+    const btn = screen.getByLabelText('Close Menu', {
       selector: 'button',
     });
     expect(btn).toBeInTheDocument();
@@ -57,7 +57,7 @@ describe('<Header />', () => {
   });
 
   it('clicking the menu button opens the menu', () => {
-    const btn = screen.getByLabelText('Open Main Menu', {
+    const btn = screen.getByLabelText('Open Menu', {
       selector: 'button',
     });
     act(() => btn.click());
@@ -67,7 +67,7 @@ describe('<Header />', () => {
 
   it('clicking the cloe button closes the menu', () => {
     openMenu();
-    const btn = screen.getByLabelText('Close Main Menu', {
+    const btn = screen.getByLabelText('Close Menu', {
       selector: 'button',
     });
     act(() => btn.click());
