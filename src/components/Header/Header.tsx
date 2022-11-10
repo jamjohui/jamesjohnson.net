@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
+import { Branding } from './Branding';
 import { cx } from '../../utils';
+import { HeaderLink } from './HeaderLink';
 import { Icon } from '../Icon';
 import { IconButton } from '../IconButton';
 import { MainMenu } from '../../config';
@@ -22,17 +24,16 @@ export const Header = (): JSX.Element => {
 
   return (
     <header className={styles.header}>
-      <Icon className={styles.logo} glyph="logo" />
-      <h2>James Johnson</h2>
+      <Branding />
       <Nav
         className={cx(styles.nav, open ? styles.open : styles.closed)}
         onClose={onClose}
         title="Main Menu"
       >
         {MainMenu.map((item) => (
-          <li className={styles.link} key={item.id}>
-            <Link href={item.url}>{item.label}</Link>
-          </li>
+          <HeaderLink key={item.id} url={item.url}>
+            {item.label}
+          </HeaderLink>
         ))}
       </Nav>
       <IconButton

@@ -9,41 +9,6 @@
   display: none;
 }
 
-.link {
-  border-left: 4px solid transparent;
-  margin: 1em 0.8em;
-  padding: 0 0.5em;
-  transition: all 0.25s ease-in-out;
-}
-
-.link:hover {
-  border-left-color: var(--color-bg-hover);
-}
-
-.link:active {
-  border-left-color: var(--color-action);
-}
-
-.link a {
-  color: var(--color-fg);
-  transition: all 0.25s ease-in-out;
-}
-
-.link:hover a {
-  color: var(--color-fg-hover);
-  text-decoration: none;
-}
-
-.link:active a {
-  color: var(--color-action);
-}
-
-.logo {
-  fill: var(--color-action);
-  height: 2em;
-  width: 2em;
-}
-
 .nav {
   background-color: var(--color-menu-bg);
   box-shadow: 4px 4px 8px #19191abf;
