@@ -26,7 +26,7 @@ html {
   --color-icon-active: #0077a9;
   --color-menu-bg: #fff;
   --font-weight-body: 400;
-  --font-weight-heading: 610;
+  --font-weight-heading: 600;
 }
 
 .dark {
@@ -34,8 +34,8 @@ html {
   --color-bg-hover: #313133;
   --color-bg-active: #4b4b4d;
   --color-fg: #cacbcc;
-  --color-fg-hover: #cacbcc;
-  --color-fg-active: #e4e5e6;
+  --color-fg-hover: #e4e5e6;
+  --color-fg-active: #f0f1f2;
   --color-action: #0094d3;
   --color-action-hover: #33aadc;
   --color-action-active: #66bfe5;
@@ -77,4 +77,5 @@ h4,
 h5,
 h6 {
   font-weight: var(--font-weight-heading);
+  line-height: 1.25;
 }
