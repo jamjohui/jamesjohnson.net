@@ -1,6 +1,6 @@
-import { MenuLink } from '../interfaces';
+import { FooterLink } from '../interfaces';
 
-export const FooterMenu: MenuLink[] = [
+export const FooterMenu: FooterLink[] = [
   {
     id: 'github',
     icon: 'github',

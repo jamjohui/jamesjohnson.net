@@ -13,7 +13,7 @@ export const Footer = (): JSX.Element => (
       {FooterMenu.map((item) => (
         <SocialLink
           key={item.id}
-          icon={item.icon || 'logo'}
+          icon={item.icon}
           label={item.label}
           url={item.url}
         />

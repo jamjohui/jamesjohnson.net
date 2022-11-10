@@ -1,2 +1,3 @@
 /* istanbul ignore file */
-export type { MenuLink } from './MenuLink';
+export type { HeaderLink } from './HeaderLink';
+export type { FooterLink } from './FooterLink';

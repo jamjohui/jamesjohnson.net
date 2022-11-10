@@ -1,6 +1,6 @@
-import { MenuLink } from '../interfaces';
+import { HeaderLink } from '../interfaces';
 
-export const MainMenu: MenuLink[] = [
+export const MainMenu: HeaderLink[] = [
   {
     id: 'home',
     label: 'Home',
