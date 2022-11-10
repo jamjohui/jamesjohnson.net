@@ -1,12 +1,12 @@
 .switch {
   appearance: none;
-  border: 2px solid var(--color-fg);
-  border-radius: 32px;
+  border: 0.125em solid var(--color-fg);
+  border-radius: 2em;
   cursor: pointer;
   display: inline-block;
-  height: 24px;
+  height: 1.5em;
   position: relative;
-  width: 48px;
+  width: 3em;
   transition: all 0.25s ease-out;
 }
 
@@ -15,11 +15,11 @@
   background-color: var(--color-fg);
   border: 0;
   border-radius: 50%;
-  height: 16px;
-  left: 2px;
+  height: 1em;
+  left: 0.125em;
   position: absolute;
-  top: 2px;
-  width: 16px;
+  top: 0.125em;
+  width: 1em;
   transition: all 0.25s ease-out;
 }
 
@@ -29,5 +29,5 @@
 
 .switch:checked::after {
   background-color: var(--color-action);
-  transform: translateX(24px);
+  transform: translateX(1.5em);
 }
