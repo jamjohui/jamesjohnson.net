@@ -13,6 +13,8 @@ html {
 :root,
 .light {
   --color-bg: #f0f1f2;
+  --color-bg-hover: #e4e5e6;
+  --color-bg-active: #cacbcc;
   --color-fg: #636466;
   --color-action: #0094d3;
   --color-action-hover: #0077a9;
@@ -25,6 +27,8 @@ html {
 
 .dark {
   --color-bg: #19191a;
+  --color-bg-hover: #313133;
+  --color-bg-active: #4b4b4d;
   --color-fg: #cacbcc;
   --color-action: #0094d3;
   --color-action-hover: #33aadc;
