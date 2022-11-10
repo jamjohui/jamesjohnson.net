@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
+import { cx } from '../../utils';
 import { Icon } from '../Icon';
+import { IconButton } from '../IconButton';
 import { MainMenu } from '../../config';
 import { Nav } from '../Nav';
 
@@ -10,32 +12,36 @@ import styles from './Header.module.css';
 export const Header = (): JSX.Element => {
   const [open, setOpen] = useState(false);
 
-  const onOpenClick = () => {
+  const onOpen = () => {
     setOpen(true);
   };
 
-  const onCloseClick = () => {
+  const onClose = () => {
     setOpen(false);
   };
 
   return (
     <header className={styles.header}>
-      <Icon glyph="logo" />
+      <Icon className={styles.logo} glyph="logo" />
       <h2>James Johnson</h2>
       <Nav
-        className={open ? styles.open : styles.closed}
-        onClose={onCloseClick}
+        className={cx(styles.nav, open ? styles.open : styles.closed)}
+        onClose={onClose}
         title="Main Menu"
       >
         {MainMenu.map((item) => (
-          <li key={item.id}>
+          <li className={styles.link} key={item.id}>
             <Link href={item.url}>{item.label}</Link>
           </li>
         ))}
       </Nav>
-      <button aria-label="Open Menu" onClick={onOpenClick} type="button">
-        Open
-      </button>
+      <IconButton
+        className={String(open && styles.hidden)}
+        label="Open Menu"
+        onClick={onOpen}
+      >
+        <Icon glyph="hamburger" />
+      </IconButton>
     </header>
   );
 };

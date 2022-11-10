@@ -1,5 +1,7 @@
 import { ReactNode, MouseEvent } from 'react';
 
+import { Icon } from '../Icon';
+import { IconButton } from '../IconButton';
 import styles from './Nav.module.css';
 
 export interface NavProps {
@@ -24,12 +26,12 @@ export const Nav = ({
   title,
 }: NavProps): JSX.Element => (
   <nav className={className}>
+    {onClose && (
+      <IconButton label="Close Menu" onClick={onClose}>
+        <Icon glyph="close" />
+      </IconButton>
+    )}
     <h3 className={styles.srOnly}>{title}</h3>
     <ul className={styles.list}>{children}</ul>
-    {onClose && (
-      <button aria-label="Close Menu" onClick={onClose} type="button">
-        Close
-      </button>
-    )}
   </nav>
 );

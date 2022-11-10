@@ -16,13 +16,17 @@ html {
   --color-bg-hover: #e4e5e6;
   --color-bg-active: #cacbcc;
   --color-fg: #636466;
+  --color-fg-hover: #313133;
+  --color-fg-active: #19191a;
   --color-action: #0094d3;
   --color-action-hover: #0077a9;
   --color-action-active: #00597f;
   --color-icon: #636466;
   --color-icon-hover: #0094d3;
   --color-icon-active: #0077a9;
+  --color-menu-bg: #fff;
   --font-weight-body: 400;
+  --font-weight-heading: 610;
 }
 
 .dark {
@@ -30,13 +34,17 @@ html {
   --color-bg-hover: #313133;
   --color-bg-active: #4b4b4d;
   --color-fg: #cacbcc;
+  --color-fg-hover: #cacbcc;
+  --color-fg-active: #e4e5e6;
   --color-action: #0094d3;
   --color-action-hover: #33aadc;
   --color-action-active: #66bfe5;
   --color-icon: #cacbcc;
   --color-icon-hover: #0872a0;
   --color-icon-active: #0a8ec7;
+  --color-menu-bg: #000;
   --font-weight-body: 410;
+  --font-weight-heading: 610;
 }
 
 body {
@@ -60,4 +68,13 @@ a:hover {
 
 a:active {
   color: var(--color-action-active);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-heading);
 }
