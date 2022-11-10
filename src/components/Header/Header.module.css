@@ -4,7 +4,6 @@
   gap: 0.5em;
 }
 
-.closed,
 .hidden {
   display: none;
 }
@@ -19,12 +18,56 @@
   position: absolute;
   right: 0;
   top: 0;
+  transition: all 0.5s ease-out;
+}
+
+.closed {
+  position: absolute;
+  right: -100%;
+  top: 0;
+}
+
+.open {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .nav ul {
   margin-top: 2em;
 }
 
-.open {
-  display: block;
+@media screen and (min-width: 768px) {
+  .closed {
+    display: block;
+  }
+
+  .menuBtn {
+    display: none;
+  }
+
+  .header {
+    align-items: center;
+    grid-template-columns: 2em auto 50%;
+  }
+
+  .nav {
+    background: none;
+    box-shadow: none;
+    display: block;
+    margin-left: auto;
+    position: initial;
+    transition: none;
+  }
+
+  .nav button {
+    display: none;
+  }
+
+  .nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5em;
+    margin: 0;
+  }
 }

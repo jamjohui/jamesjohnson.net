@@ -26,3 +26,21 @@
 .link:active a {
   color: var(--color-action);
 }
+
+@media screen and (min-width: 768px) {
+  .link {
+    border-left: none;
+    border-top: 4px solid transparent;
+    margin: 0;
+    padding: 0.25em 0.5em;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .link:hover {
+    border-top-color: var(--color-bg-hover);
+  }
+
+  .link:active {
+    border-top-color: var(--color-action);
+  }
+}

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Link from 'next/link';
 
 import { Branding } from './Branding';
 import { cx } from '../../utils';
@@ -37,7 +36,7 @@ export const Header = (): JSX.Element => {
         ))}
       </Nav>
       <IconButton
-        className={String(open && styles.hidden)}
+        className={cx(styles.menuBtn, String(open && styles.hidden))}
         label="Open Menu"
         onClick={onOpen}
       >
