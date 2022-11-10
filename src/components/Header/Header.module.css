@@ -48,7 +48,7 @@
   background-color: var(--color-menu-bg);
   box-shadow: 4px 4px 8px #19191abf;
   height: 100%;
-  max-width: 650px;
+  max-width: 480px;
   width: calc(100% - 4em);
   padding: 0.5em;
   position: absolute;
