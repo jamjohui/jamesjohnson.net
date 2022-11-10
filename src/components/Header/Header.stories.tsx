@@ -7,14 +7,28 @@ import { Header } from './Header';
 export default {
   title: 'Components/Header',
   component: Header,
+  parameters: {
+    viewport: {
+      defaultViewport: 'responsive',
+    },
+  },
 } as ComponentMeta<typeof Header>;
 
 export const Default: ComponentStory<typeof Header> = (): JSX.Element => (
   <Header />
 );
 
-Default.play = async ({ canvasElement }) => {
-  window.innerWidth = 320;
+export const Mobile: ComponentStory<typeof Header> = (): JSX.Element => (
+  <Header />
+);
+
+Mobile.parameters = {
+  viewport: {
+    defaultViewport: 'mobile1',
+  },
+};
+
+Mobile.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
   const el = canvas.getByLabelText('Open Menu') as HTMLButtonElement;
   await userEvent.click(el);
@@ -22,5 +36,5 @@ Default.play = async ({ canvasElement }) => {
   await waitFor(() => expect(nav).toHaveStyle({ right: '0px' }));
   const closeBtn = canvas.getByLabelText('Close Menu') as HTMLButtonElement;
   await userEvent.click(closeBtn);
-  await waitFor(() => expect(nav).toHaveStyle({ right: '-100%' }));
+  await waitFor(() => expect(nav).toHaveStyle({ right: '-320px' }));
 };
