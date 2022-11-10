@@ -1,6 +1,6 @@
 import { Copyright } from './Copyright';
-import { FooterLinks } from './FooterLinks';
-import { Nav } from './Nav';
+import { FooterMenu } from '../../config';
+import { Nav } from '../Nav';
 import { SocialLink } from './SocialLink';
 
 import styles from './Footer.module.css';
@@ -9,8 +9,8 @@ import styles from './Footer.module.css';
 export const Footer = (): JSX.Element => (
   <footer className={styles.footer}>
     <Copyright />
-    <Nav>
-      {FooterLinks.map((item) => (
+    <Nav className={styles.nav} title="Social Media Links">
+      {FooterMenu.map((item) => (
         <SocialLink
           key={item.id}
           icon={item.icon}

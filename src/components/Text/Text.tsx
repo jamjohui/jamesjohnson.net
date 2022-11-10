@@ -9,5 +9,3 @@ export interface TextProps {
 export const Text = ({ children }: TextProps): JSX.Element => (
   <p className={styles.text}>{children}</p>
 );
-
-export default Text;

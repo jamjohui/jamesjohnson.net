@@ -1,6 +1,11 @@
 .footer {
   align-items: center;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 0.5em;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: flex-end;
 }

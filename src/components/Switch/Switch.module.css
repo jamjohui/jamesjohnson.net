@@ -1,24 +1,33 @@
 .switch {
   appearance: none;
-  border: 1px solid var(--color-component);
+  border: 0.125em solid var(--color-fg);
   border-radius: 2em;
   cursor: pointer;
   display: inline-block;
   height: 1.5em;
   position: relative;
   width: 3em;
+  transition: all 0.25s ease-out;
 }
 
 .switch::after {
   content: '';
-  background-color: var(--color-component);
+  background-color: var(--color-fg);
   border: 0;
   border-radius: 50%;
-  height: 1.375em;
+  height: 1em;
+  left: 0.125em;
   position: absolute;
-  width: 1.375em;
+  top: 0.125em;
+  width: 1em;
+  transition: all 0.25s ease-out;
+}
+
+.switch:checked {
+  border-color: var(--color-action);
 }
 
 .switch:checked::after {
+  background-color: var(--color-action);
   transform: translateX(1.5em);
 }

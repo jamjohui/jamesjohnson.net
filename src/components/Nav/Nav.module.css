@@ -1,0 +1,7 @@
+.list {
+  list-style: none;
+}
+
+.srOnly {
+  composes: srOnly from '../../styles/accessibility.module.css';
+}
