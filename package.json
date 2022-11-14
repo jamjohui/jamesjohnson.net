@@ -10,10 +10,10 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "test:storybook": "test-storybook",
     "lint": "next lint && stylelint '**/*.css'",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "test-storybook": "test-storybook"
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "next": "12.3.1",
@@ -27,6 +27,7 @@
     "@storybook/addon-essentials": "^6.5.12",
     "@storybook/addon-interactions": "^6.5.13",
     "@storybook/addon-links": "^6.5.12",
+    "@storybook/addon-viewport": "^6.5.13",
     "@storybook/builder-webpack5": "^6.5.12",
     "@storybook/jest": "^0.0.10",
     "@storybook/manager-webpack5": "^6.5.12",

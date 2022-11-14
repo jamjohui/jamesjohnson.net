@@ -9,8 +9,8 @@ describe('cx', () => {
     expect(cx()).toBe('');
   });
 
-  it('omits undefined arguments', () => {
-    expect(cx('one', undefined, 'two', undefined)).toBe('one two');
+  it('omits undefined and null arguments', () => {
+    expect(cx('one', undefined, 'two', null)).toBe('one two');
   });
 
   it('omits false arguments', () => {
