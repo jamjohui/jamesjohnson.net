@@ -82,3 +82,27 @@ h6 {
   --font-weight-body: 410;
   --font-weight-heading: 610;
 }
+
+a {
+  color: var(--color-action);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-action-hover);
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--color-action-active);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-heading);
+  line-height: 1.25;
+}
