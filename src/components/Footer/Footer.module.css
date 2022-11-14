@@ -2,7 +2,12 @@
   align-items: center;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 0.5em;
+  gap: 0.5rem;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav ul {

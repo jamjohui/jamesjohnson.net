@@ -1,7 +1,7 @@
 .header {
   display: grid;
-  grid-template-columns: 2em auto 2em;
-  gap: 0.5em;
+  gap: 0.5rem;
+  grid-template-columns: 2rem auto 2rem;
 }
 
 .hidden {
@@ -12,29 +12,26 @@
   background-color: var(--color-menu-bg);
   box-shadow: 4px 4px 8px #19191abf;
   height: 100%;
-  max-width: 480px;
-  width: calc(100% - 4em);
-  padding: 0.5em;
-  position: absolute;
+  max-width: 320px;
+  width: calc(100% - 4rem);
+  padding: 0.5rem;
+  position: fixed;
   right: 0;
   top: 0;
-  transition: all 0.5s ease-out;
+  transition: right 0.5s ease-out;
+  z-index: 1;
 }
 
-.closed {
-  position: absolute;
-  right: -100%;
-  top: 0;
+.nav.closed {
+  right: -320px;
 }
 
-.open {
-  position: absolute;
+.nav.open {
   right: 0;
-  top: 0;
 }
 
 .nav ul {
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -42,22 +39,25 @@
     display: block;
   }
 
-  .menuBtn {
-    display: none;
-  }
-
   .header {
     align-items: center;
-    grid-template-columns: 2em auto 50%;
+    grid-template-columns: 2rem auto 50%;
+  }
+
+  .menuBtn {
+    display: none;
   }
 
   .nav {
     background: none;
     box-shadow: none;
     display: block;
+    height: auto;
     margin-left: auto;
+    max-width: unset;
     position: initial;
     transition: none;
+    width: 100%;
   }
 
   .nav button {
@@ -66,8 +66,8 @@
 
   .nav ul {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.5em;
+    grid-template-columns: repeat(4, 1fr) 8rem;
+    gap: 0.5rem;
     margin: 0;
   }
 }

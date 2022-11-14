@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { within, userEvent, waitFor } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
-import { Header } from './Header';
+import { Header, HeaderProps } from './Header';
 
 export default {
   title: 'Components/Header',
@@ -14,9 +14,12 @@ export default {
   },
 } as ComponentMeta<typeof Header>;
 
-export const Default: ComponentStory<typeof Header> = (): JSX.Element => (
-  <Header />
-);
+export const Default: ComponentStory<typeof Header> = (
+  args: HeaderProps
+): JSX.Element => <Header {...args} />;
+Default.args = {
+  route: 'home',
+};
 
 export const Mobile: ComponentStory<typeof Header> = (): JSX.Element => (
   <Header />

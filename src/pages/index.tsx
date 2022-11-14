@@ -1,27 +1,16 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Switch } from '../components';
 import { useTheme } from '../hooks';
 
 const Home: NextPage = () => {
-  const { theme, setTheme } = useTheme();
-
-  const onChange = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-  };
+  const { theme } = useTheme();
 
   return (
     <>
       <Head>
         <title>jamesjohnson.net</title>
       </Head>
-      <main>
-        <h1>{theme === 'light' ? 'Light' : 'Dark'} Theme</h1>
-        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <label>
-          Theme <Switch onChange={onChange} />
-        </label>
-      </main>
+      <h1>{theme === 'light' ? 'Light' : 'Dark'} Theme</h1>
     </>
   );
 };

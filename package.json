@@ -10,10 +10,10 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "test:storybook": "test-storybook",
     "lint": "next lint && stylelint '**/*.css'",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "test-storybook": "test-storybook"
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "next": "12.3.1",

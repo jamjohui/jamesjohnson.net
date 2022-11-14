@@ -3,10 +3,18 @@ import { within, userEvent } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
 import Home from '../pages/index';
+import { Page } from '../components';
 
 export default {
   title: 'Pages/Home',
   component: Home,
+  decorators: [
+    (Story) => (
+      <Page route="/">
+        <Story />
+      </Page>
+    ),
+  ],
 } as ComponentMeta<typeof Home>;
 
 export const Default: ComponentStory<typeof Home> = (): JSX.Element => <Home />;

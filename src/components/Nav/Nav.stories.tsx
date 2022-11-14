@@ -5,6 +5,7 @@ import { Nav, NavProps } from './Nav';
 export default {
   title: 'Components/Nav',
   component: Nav,
+  argTypes: { onClose: { action: 'closed' } },
 } as ComponentMeta<typeof Nav>;
 
 export const Default: ComponentStory<typeof Nav> = (
