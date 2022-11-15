@@ -8,6 +8,7 @@ import { Icon } from '../Icon';
 import { IconButton } from '../IconButton';
 import { MainMenu } from '../../config';
 import { Nav } from '../Nav';
+import type { Theme } from '../../types';
 import { ThemeSwitch } from './ThemeSwitch';
 import { useTheme } from '../../hooks';
 
@@ -58,7 +59,7 @@ export const Header = ({ route }: HeaderProps): JSX.Element => {
             {item.label}
           </HeaderLink>
         ))}
-        <ThemeSwitch onChange={onChangeTheme} theme={theme} />
+        <ThemeSwitch onChange={onChangeTheme} theme={theme as Theme} />
       </Nav>
       <IconButton
         className={cx(styles.menuBtn, isOpen ? styles.hidden : '')}

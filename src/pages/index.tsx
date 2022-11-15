@@ -1,18 +1,13 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useTheme } from '../hooks';
 
-const Home: NextPage = () => {
-  const { theme } = useTheme();
-
-  return (
-    <>
-      <Head>
-        <title>jamesjohnson.net</title>
-      </Head>
-      <h1>{theme === 'light' ? 'Light' : 'Dark'} Theme</h1>
-    </>
-  );
-};
+const Home: NextPage = (): JSX.Element => (
+  <>
+    <Head>
+      <title>James Johnson - UI Engineer</title>
+    </Head>
+    <h1>Home</h1>
+  </>
+);
 
 export default Home;
